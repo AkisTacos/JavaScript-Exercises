@@ -9,7 +9,8 @@ Clock Background Photo by Sonja Langford on Unsplash
 
 Write a JavaScript program to display the current day and time in the following format.
 
-  Sample Output : 
-  Today is : Tuesday. 
+Sample Output : 
+ 
+ Today is : Tuesday. 
   
-  Current time is : 10:30:38 PM
+ Current time is : 10:30:38 PM
