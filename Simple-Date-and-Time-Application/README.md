@@ -14,3 +14,5 @@ Sample Output :
  Today is : Tuesday. 
   
  Current time is : 10:30:38 PM
+ 
+ Visual Representation: [Simple Date and Time](https://akistacos.github.io/Simple-Date-and-Time-Application/ "Simple Date and Time Application")
