@@ -6,13 +6,20 @@ $(function(){
   var $name = $('#name');
   var $drink = $('#drink');
 
+  var orderTemplate = "" +
+  "<li>" +
+  "<p><strong>Name:</strong> {{name}}</p>" +
+  "<p><strong>Drink:</strong> {{drink}}</p>" +
+  "<button data-id='{{id}}' class='remove'>X</button" +
+  "</li>";
+
   function addOrder(order){
-    $orders.append('<li>name: ' + order.name + ', drink:' + order.drink + '</li');
+    $orders.append(Mustache.render(orderTemplate,order));
   }
 
   $.ajax({
     type: 'GET',
-    url: "",
+    url: "http://localhost:3000/posts",
     success: function(orders){
       $.each(orders, function(i, order){
         // $orders.append('<li>my order</li>');
@@ -35,7 +42,7 @@ $(function(){
 
     $.ajax({
       type: 'POST',
-      url: "",
+      url: "http://localhost:3000/posts",
       data: order,
       success: function(newOrder){
         addOrder(newOrder);
@@ -46,5 +53,12 @@ $(function(){
     });
 
   });
+
+  $('.remove').on('click', function() {
+    $.ajax({
+      type: 'DELETE',
+      url: '/api/orders/' + $(this).attr('data-id');
+    });
+  })
 
 });
