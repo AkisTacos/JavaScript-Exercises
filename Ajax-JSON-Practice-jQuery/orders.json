@@ -1,12 +1,18 @@
 {
-  {
-    id: 1,
-    name: "James",
-    drink: "Coffee",
-  },
-  {
-    id: 2,
-    name: "Carl",
-    drink: "Tea",
+  "posts": [
+    {
+      "name": "Aki",
+      "drink": "Mango Tea",
+      "id": 6
+    },
+    {
+      "name": "Shinichi",
+      "drink": "Milk Tea",
+      "id": 7
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
   }
 }

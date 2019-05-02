@@ -9,11 +9,30 @@
     <script src="script.js"></script>
   </head>
 
+
   <body>
     <h1>jQuery Ajax practice</h1>
     <h2>Coffee Orders</h2>
-    <ul id="orders">
-    </ul>
+    <ul id="orders"></ul>
+ script
+    <script type="text/template" id="order-template">
+      <li data-id="{{id}}">
+        <p>
+          <strong>Name:</strong>
+          <span class="noedit name">{{name}}</span>
+          <input class="edit name"/>
+        </p>
+        <p>
+          <strong>Drink:</strong>
+          <span class="noedit drink">{{drink}}</span>
+          <input class="edit drink"/>
+        </p>
+        <button data-id='{{id}}' class='remove'>X</button>
+        <button class="editOrder noedit">Edit</button>
+        <button class="saveEdit edit">Save</button>
+        <button class="cancelEdit edit">Cancel</button>
+      </li>
+    </script>
 
     <h4>Add a Coffee Order</h4>
     <p>name: <input type="text" id="name"></p>
